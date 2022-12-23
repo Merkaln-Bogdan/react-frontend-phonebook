@@ -3,7 +3,9 @@ import toast from "react-hot-toast";
 
 const fetch = () => {
   const defaultOptions = {
-    baseURL: process.env.REACT_APP_API_URL,
+    // baseURL: process.env.REACT_APP_API_URL,
+    baseURL: "http://localhost:4040",
+
     headers: {
       "Content-type": "application/json",
     },

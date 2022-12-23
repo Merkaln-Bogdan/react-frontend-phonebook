@@ -13,7 +13,10 @@ export const userDataSlice = createSlice({
   initialState,
   reducers: {
     setUser(state, action) {
-      state = action.payload;
+      state.name = action.payload.name;
+      state.email = action.payload.email;
+      state.avatarURL = action.payload.avatarURL;
+      state.subscription = action.payload.subscription;
     },
   },
 });

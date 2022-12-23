@@ -16,6 +16,10 @@ class ContactsDataService {
   public async postContact(data: any) {
     return this.http.post<ContactData>(`${this.ep}`, data);
   }
+
+  public async deleteContact(id: any) {
+    return this.http.delete<ContactData>(`${this.ep}/${id}`);
+  }
 }
 
 const contactsDataService = new ContactsDataService();

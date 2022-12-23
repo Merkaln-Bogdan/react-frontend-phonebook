@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { Container } from "@mui/material";
+
 import { NavBar } from "sections/NavBar/NavBar";
 
 type LayoutProps = {
@@ -7,10 +9,10 @@ type LayoutProps = {
 const Layout = (props: LayoutProps): React.ReactElement => {
   const { children } = { ...props };
   return (
-    <div>
+    <Container maxWidth="md">
       <NavBar />
       {children}
-    </div>
+    </Container>
   );
 };
 
